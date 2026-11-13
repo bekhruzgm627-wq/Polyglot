@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polyglot</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="panel hero-panel">
+        <div class="brand">Polyglot</div>
+        <h1>Изучай языки <span>с умом</span></h1>
+        <p>
+          Современная платформа для обучения, повторения и отслеживания прогресса.
+        </p>
+        <ul>
+          <li>Личный кабинет</li>
+          <li>Google вход</li>
+          <li>Синхронизация прогресса</li>
+        </ul>
+      </aside>
+
+      <main class="panel auth-panel">
+        <div class="tabs">
+          <button class="tab active" data-tab="login">Войти</button>
+          <button class="tab" data-tab="register">Регистрация</button>
+        </div>
+
+        <section class="form-panel active" id="login-panel">
+          <h2>Вход в аккаунт</h2>
+          <form id="login-form">
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Пароль
+              <input type="password" name="password" placeholder="••••••••" required />
+            </label>
+            <button type="submit">Войти</button>
+          </form>
+          <div class="divider"><span>или</span></div>
+          <button id="google-login" class="google-btn" type="button">Продолжить через Google</button>
+        </section>
+
+        <section class="form-panel" id="register-panel">
+          <h2>Создать аккаунт</h2>
+          <form id="register-form">
+            <label>
+              Имя
+              <input type="text" name="name" placeholder="Ваше имя" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Пароль
+              <input type="password" name="password" placeholder="Минимум 6 символов" required />
+            </label>
+            <button type="submit">Зарегистрироваться</button>
+          </form>
+        </section>
+
+        <section class="account-panel hidden" id="account-panel">
+          <h2>Личный кабинет</h2>
+          <div class="account-card">
+            <p class="label">Пользователь</p>
+            <h3 id="user-name">—</h3>
+            <p id="user-email">—</p>
+          </div>
+
+          <div class="progress-box">
+            <div class="progress-line">
+              <span id="xp-value">0</span>
+              <strong>XP</strong>
+            </div>
+            <input id="xp-range" type="range" min="0" max="1000" value="0" />
+          </div>
+
+          <button id="logout-btn" class="secondary-btn" type="button">Выйти</button>
+        </section>
+
+        <div id="message" class="message hidden" role="alert"></div>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
